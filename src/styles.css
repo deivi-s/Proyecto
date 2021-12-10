@@ -69,7 +69,7 @@ body {
   border: 0;
   margin: 0;
   padding: 0;
-  background-color: #202020;
+  background-color: #000000;
   display: block;
 }
 
@@ -2051,7 +2051,7 @@ ul.navbar-nav > li.active a::before {
 #header{
   position: relative;
   padding: 0 15px;
-  background-color: #272829;
+  background-color: #0c0c0c;
   min-height: 70px;
 }
 
