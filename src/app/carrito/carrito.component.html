@@ -20,7 +20,7 @@
             <tr *ngFor="let pelicula of peliculas">
               <th scope="row">{{ pelicula.nombre }}</th>
               <td>$ {{ pelicula.precio }}</td>
-              <td><input type="number" [(ngModel)]="pelicula.cantidad" class="form-groum" ></td>
+              <td><input type="number" [(ngModel)]="pelicula.cantidad" class="form-groum"></td>
               <td>$ {{ pelicula.subTotal }}</td>
             </tr>
           </tbody>
@@ -30,8 +30,18 @@
               <th>$ {{ 100.5 }}</th>
             </tr>
           </tfoot>
+
         </table>
+        <div class="col-md-9"></div>
+        <div class="col-md-3">
+          <a class="btn d-block hvr-sweep-to-right mb-3" tabindex="0"><i class="icofont-facebook mr-2"
+              aria-hidden="true"></i>PAGAR</a>
+        </div>
+
       </div>
+
     </div>
+
   </section>
+
 </div>
