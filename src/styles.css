@@ -2067,3 +2067,23 @@ ul.navbar-nav > li.active a::before {
 #link-rojo{
   color:#ff000096
 }
+
+tr, td{
+  color: white;
+}
+
+tbody tr:hoover{
+  color:rgba(253, 249, 249, 0.952);
+}
+
+tbody input{
+  width: 50px;
+}
+
+#total{
+  text-align: right;
+}
+
+thead tr{
+  background: red;
+}

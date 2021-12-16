@@ -1,0 +1,37 @@
+<div class="main-content">
+  <section class="login">
+    <div class="container">
+      <div class="row text-center intro">
+        <div class="col-12">
+          <h2>Carrito de compras</h2>
+        </div>
+      </div>
+      <div class="row">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Producto</th>
+              <th scope="col">Precio</th>
+              <th scope="col">Cantidad</th>
+              <th scope="col">Sun total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let pelicula of peliculas">
+              <th scope="row">{{ pelicula.nombre }}</th>
+              <td>$ {{ pelicula.precio }}</td>
+              <td><input type="number" [(ngModel)]="pelicula.cantidad" class="form-groum" ></td>
+              <td>$ {{ pelicula.subTotal }}</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th colspan="3" id="total"><span>TOTAL</span></th>
+              <th>$ {{ 100.5 }}</th>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </section>
+</div>
