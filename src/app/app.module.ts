@@ -10,6 +10,7 @@ import { PrincipalComponent } from './body/principal/principal.component';
 import { FormLoginComponent } from './form-login/form-login.component';
 import { FormRegistroComponent } from './form-registro/form-registro.component';
 import { CarritoComponent } from './carrito/carrito.component';
+import { DetalleComponent } from './body/principal/detalle/detalle.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CarritoComponent } from './carrito/carrito.component';
     PrincipalComponent,
     FormLoginComponent,
     FormRegistroComponent,
-    CarritoComponent
+    CarritoComponent,
+    DetalleComponent
   ],
   imports: [
     BrowserModule,
