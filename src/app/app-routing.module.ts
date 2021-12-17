@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'login', component: FormLoginComponent },
   { path: 'registro', component: FormRegistroComponent },
   { path: 'peliculas', component: PrincipalComponent },
-  { path: 'detalle', component: DetalleComponent },
+  { path: 'detalle/:id', component: DetalleComponent },
   { path: 'carrito', component: CarritoComponent },
   { path: '**', component: FormLoginComponent },
 ];
