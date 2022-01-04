@@ -11,6 +11,8 @@ import { FormLoginComponent } from './form-login/form-login.component';
 import { FormRegistroComponent } from './form-registro/form-registro.component';
 import { CarritoComponent } from './carrito/carrito.component';
 import { DetalleComponent } from './body/principal/detalle/detalle.component';
+import { UserService } from './services/user.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,9 +29,12 @@ import { DetalleComponent } from './body/principal/detalle/detalle.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,  
   ],
-  providers: [],
+  providers: [
+    UserService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

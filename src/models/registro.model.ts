@@ -9,7 +9,7 @@ export class RegistroModel {
   clave_confirmada: string;
 
   constructor(params?: Partial<RegistroModel>) {
-    this.id_usuario = params?.id_usuario || o;
+    this.id_usuario = params?.id_usuario || 0;
     this.usuario = params?.usuario || '';
     this.correo = params?.correo || '';
     this.nombres = params?.nombres || '';

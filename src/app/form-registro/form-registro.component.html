@@ -9,19 +9,21 @@
           </div>
           <div class="row">
               <div class="col-lg-12">
-                  <form id="signup-form" action="#" method="post">
+                  <form (ngSubmit)="registrar()" [formGroup]="model">
                       <div class="error-container"></div>
                       <div class="row">
                           <div class="col-md-6">
                               <div class="form-group">
                                   <label>Usuario</label>
-                                  <input class="form-control form-control-name" name="usuario"  placeholder="" type="text" required="">
+                                  <input class="form-control form-control-name" placeholder="Usuario" name="usuario" id="usuario" formControlName="usuario">                                  
+                                  <p *ngIf="f.usuario.errors?.required" class="color-green">El campo usuario es requerido</p>
                               </div>
                           </div>
                           <div class="col-md-6">
                               <div class="form-group">
                                   <label>Correo</label>
-                                  <input type="email" class="form-control" name="correo" required="required">
+                                  <input type="email" class="form-control" placeholder="Correo" name="correo" id="correo" formControlName="correo">
+                                  <p *ngIf="f.correo.errors?.required" class="color-green">El campo correo es requerido</p>
                               </div>
                           </div>
                       </div>
@@ -29,13 +31,15 @@
                           <div class="col-md-6">
                               <div class="form-group">
                                   <label>Nombres</label>
-                                  <input class="form-control form-control-name" name="nombres" id="first-name" placeholder="" type="text" required="">
+                                  <input class="form-control form-control-name" placeholder="Nombres" name="nombres" id="nombres" formControlName="nombres">
+                                  <p *ngIf="f.nombres.errors?.required" class="color-green">El campo nombres es requerido</p>
                               </div>
                           </div>
                           <div class="col-md-6">
                               <div class="form-group">
                                   <label>Apellidos</label>
-                                  <input class="form-control form-control-name" name="apellidos" id="last-name" placeholder="" type="text" required="">
+                                  <input class="form-control form-control-name" placeholder="Apellidos" name="apellidos" id="apellidos" formControlName="apellidos">
+                                  <p *ngIf="f.apellidos.errors?.required" class="color-green">El campo apellidos es requerido</p>
                               </div>
                           </div>
                       </div>
@@ -43,18 +47,13 @@
                           <div class="col-md-6">
                               <div class="form-group">
                                   <label>Contraseña</label>
-                                  <input type="password" class="form-control" name="clave" id="password" required="required">
-                              </div>
-                          </div>
-                          <div class="col-md-6">
-                              <div class="form-group">
-                                  <label>Confirmar Contraseña</label>
-                                  <input type="password" class="form-control" name="clave_confirmada" id="confirm-password" required="required">
+                                  <input type="password" class="form-control" placeholder="clave" name="clave" id="clave" formControlName="clave">
+                                  <p *ngIf="f.clave.errors?.required" class="color-green">El campo clave es requerido</p>
                               </div>
                           </div>
                       </div>
                       <div class="form-group mt-3">
-                          <button class="btn hvr-sweep-to-right" type="submit">Crear Nueva Cuenta</button>
+                          <button class="btn hvr-sweep-to-right" type="submit" id="registrar">Crear Nueva Cuenta</button>
                       </div>
                   </form>
                   <div class="text-center">Tienes una cuenta? <a id="link-rojo"  routerLink="login">Inicia Sesión</a></div>

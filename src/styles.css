@@ -2087,3 +2087,8 @@ tbody input{
 thead tr{
   background: red;
 }
+
+.color-green{
+  color:red !important;
+  font-weight: bold;
+}
